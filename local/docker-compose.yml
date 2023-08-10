@@ -1,0 +1,13 @@
+version: '3.6'
+services:
+  golang-docker-isolation-provider:
+    image: deepf/golang-docker-isolation-provider:main
+    networks:
+      - deep
+    ports:
+      - 3020:3020
+    restart: always
+    environment: {}
+networks:
+  deep:
+    driver: bridge
